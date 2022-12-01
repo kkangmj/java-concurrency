@@ -12,7 +12,7 @@ public class AtomicTest {
     private final ExecutorService THREAD_POOL = Executors.newFixedThreadPool(10);
 
     @Test
-    void 삼십명의_사람들이_동시에_버스티켓을_구매한다() throws InterruptedException {
+    void 삼십명의_사람들이_동시에_버스티켓을_구매한다_atomic() throws InterruptedException {
 
         int N = 30;
         CountDownLatch latch = new CountDownLatch(N);
@@ -31,5 +31,4 @@ public class AtomicTest {
         System.out.println("======= Total reservation: " + busReservation + " =======");
         assertThat(busReservation).isEqualTo(N);
     }
-
 }
